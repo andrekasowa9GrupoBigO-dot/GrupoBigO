@@ -1,14 +1,15 @@
 package modelo;
 
 public class Encomenda {
-    // Atributos da encomenda
+
+
     private int id;
     private String origem;
     private String destino;
     private String produto;
     private double peso;
 
-    // Construtor
+
     public Encomenda(int id, String origem, String destino, String produto, double peso) {
         this.id = id;
         this.origem = origem;
@@ -38,7 +39,7 @@ public class Encomenda {
         return peso;
     }
 
-    // Método para mostrar os dados da encomenda
+
     public void mostrarEncomenda() {
         System.out.println("ID: " + id);
         System.out.println("Origem: " + origem);

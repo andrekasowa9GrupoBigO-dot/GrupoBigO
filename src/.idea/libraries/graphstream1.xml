@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="graphstream1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-algo-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-ui-swing-2.0 (1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-ui-swing-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-ui-javafx-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-core-2.0.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../graphstream" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-ui-swing-2.0 (1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-ui-swing-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../graphstream/gs-ui-javafx-2.0.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../graphstream" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../graphstream" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../graphstream" recursive="false" type="SOURCES" />
+  </library>
+</component>

@@ -37,82 +37,90 @@ public class Grafo {
         vertices.put("Huambo", new Vertice("Huambo", "Centro"));
         vertices.put("Bié", new Vertice("Bié", "Centro"));
         vertices.put("Cunene", new Vertice("Cunene", "Sul"));
+
     }
 
-    // Criar arestas entre províncias (ligação fictícia para exemplo)
+
     private void criarArestas() {
-        // Luanda ↔ Bengo
+
         adicionarAresta("Luanda", "Bengo", 50);
         adicionarAresta("Bengo", "Luanda", 50);
-        adicionarAresta("Luanda", "Bengo", 50);
-        adicionarAresta("Bengo", "Uíge", 50);
 
-        // Luanda ↔ Cuanza Norte
+
         adicionarAresta("Luanda", "Cuanza Norte", 120);
         adicionarAresta("Cuanza Norte", "Luanda", 120);
 
-        // Cuanza Norte ↔ Malanje
+
         adicionarAresta("Cuanza Norte", "Malanje", 200);
         adicionarAresta("Malanje", "Cuanza Norte", 200);
 
-        // Cuanza Sul ↔ Benguela
+        adicionarAresta("Benguela", "Huambo", 120);
+        adicionarAresta("Huambo", "Benguela", 120);
+
+
         adicionarAresta("Cuanza Sul", "Benguela", 150);
         adicionarAresta("Benguela", "Cuanza Sul", 150);
 
-        // Benguela ↔ Huíla
+
         adicionarAresta("Benguela", "Huíla", 130);
         adicionarAresta("Huíla", "Benguela", 130);
 
-        // Huíla ↔ Namibe
+
         adicionarAresta("Huíla", "Namibe", 160);
         adicionarAresta("Namibe", "Huíla", 160);
 
-        // Malanje ↔ Lunda Norte
+        adicionarAresta("Lunda Sul", "Malanje", 557);
+        adicionarAresta("Malanje", "Lunda Sul", 557);
+
+        adicionarAresta("Lunda Sul", "Bié", 800);
+        adicionarAresta("Bié", "Lunda Sul", 800);
+
         adicionarAresta("Malanje", "Lunda Norte", 400);
         adicionarAresta("Lunda Norte", "Malanje", 400);
 
-        // Lunda Norte ↔ Lunda Sul
+
         adicionarAresta("Lunda Norte", "Lunda Sul", 200);
         adicionarAresta("Lunda Sul", "Lunda Norte", 200);
 
-        // Lunda Sul ↔ Moxico
+        adicionarAresta("Uíge", "Cuanza Norte", 160);
+        adicionarAresta("Cuanza Norte", "Uíge", 160);
+
         adicionarAresta("Lunda Sul", "Moxico", 300);
         adicionarAresta("Moxico", "Lunda Sul", 300);
 
-        // Moxico ↔ Cuando Cubango
+
+
         adicionarAresta("Moxico", "Cuando Cubango", 250);
         adicionarAresta("Cuando Cubango", "Moxico", 250);
 
-        // Cabinda ↔ Zaire
+
         adicionarAresta("Cabinda", "Zaire", 300);
         adicionarAresta("Zaire", "Cabinda", 150);
+
         adicionarAresta("Huíla", "Huambo", 50);
         adicionarAresta("Huambo", "Bié", 50);
-        adicionarAresta("Bié", "Cuanza Norte", 50);
 
-
-        // Uíge ↔ Zaire
         adicionarAresta("Zaire", "Uíge", 180);
-        adicionarAresta("Zaire", "Bengo", 50);
+        adicionarAresta("Zaire", "Bengo", 180);
+
         adicionarAresta("Bengo", "Cuanza Norte", 50);
         adicionarAresta("Cuanza Norte", "Cuanza Sul", 50);
-        adicionarAresta("Cuanza Sul", "Benguela", 50);
 
-        // Huambo ↔ Bié
         adicionarAresta("Huambo", "Bié", 100);
         adicionarAresta("Bié", "Huambo", 100);
+
         adicionarAresta("Bié", "Malanje", 50);
         adicionarAresta("Bié", "Moxico", 50);
-        // Bié ↔ Cuanza Sul
+
         adicionarAresta("Bié", "Cuanza Sul", 120);
         adicionarAresta("Cuanza Sul", "Bié", 120);
 
-        // Cunene ↔ Namibe
         adicionarAresta("Cunene", "Namibe", 140);
         adicionarAresta("Namibe", "Cunene", 140);
+
     }
 
-    // Método para adicionar aresta
+
     private void adicionarAresta(String origem, String destino, double peso) {
         Vertice vOrigem = vertices.get(origem);
         Vertice vDestino = vertices.get(destino);
@@ -121,12 +129,12 @@ public class Grafo {
         }
     }
 
-    // Retornar todos os vértices
+
     public HashMap<String, Vertice> getVertices() {
         return vertices;
     }
 
-    // Retornar um vértice pelo nome
+
     public Vertice getVertice(String nome) {
         return vertices.get(nome);
     }

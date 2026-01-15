@@ -15,10 +15,10 @@ public class VisualGrafo extends JPanel {
     private HashMap<String, Vertice> vertices;
     private List<Vertice> rotaDijkstra;
 
-    // Posições dos vértices
+
     public HashMap<String, Point> posicoes;
 
-    // Controle de arraste
+
     private String verticeSelecionado = null;
     private final int RAIO = 15;
 
@@ -32,7 +32,7 @@ public class VisualGrafo extends JPanel {
         ativarMovimento();
     }
 
-    // ================= POSIÇÕES INICIAIS =================
+
     private void definirPosicoes() {
         posicoes.put("Cabinda", new Point(80, 80));
         posicoes.put("Zaire", new Point(150, 120));
@@ -52,6 +52,7 @@ public class VisualGrafo extends JPanel {
         posicoes.put("Namibe", new Point(250, 650));
         posicoes.put("Cunene", new Point(450, 680));
         posicoes.put("Cuando Cubango", new Point(650, 550));
+
     }
 
     // ================= DESENHO =================
@@ -120,7 +121,6 @@ public class VisualGrafo extends JPanel {
         addMouseMotionListener(mouse);
     }
 
-    // ================= APOIO =================
     private boolean rotaContem(Vertice v1, Vertice v2, List<Vertice> rota) {
         for (int i = 0; i < rota.size() - 1; i++) {
             if ((rota.get(i) == v1 && rota.get(i + 1) == v2) ||
@@ -133,17 +133,17 @@ public class VisualGrafo extends JPanel {
 
     private Color obterCorRegiao(String regiao) {
         switch (regiao) {
-            case "Norte": return Color.BLUE;
-            case "Sul": return Color.GREEN;
-            case "Leste": return Color.YELLOW;
-            case "Oeste": return Color.ORANGE;
-            case "Centro": return Color.MAGENTA;
-            case "Sul-Leste": return Color.CYAN;
+            case "Norte": return Color.RED;
+            case "Sul": return Color.RED;
+            case "Leste": return Color.RED;
+            case "Oeste": return Color.RED;
+            case "Centro": return Color.RED;
+            case "Sul-Leste": return Color.RED;
             default: return Color.LIGHT_GRAY;
         }
     }
 
-    // ================= JANELA =================
+
     public static void mostrarGrafo(HashMap<String, Vertice> vertices, List<Vertice> rota) {
         JFrame frame = new JFrame("Mapa de Angola - Rotas Nacionais");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

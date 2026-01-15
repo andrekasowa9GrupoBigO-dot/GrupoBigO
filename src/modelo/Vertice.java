@@ -7,7 +7,7 @@ public class Vertice {
     private String regiao; // Norte, Sul, Centro, Leste, Sul
     private ArrayList<Aresta> arestas;
 
-    // Coordenadas para visualização gráfica
+
     private double x;
     private double y;
 
@@ -17,7 +17,7 @@ public class Vertice {
         this.arestas = new ArrayList<>();
     }
 
-    // --- getters existentes ---
+
     public String getNome() {
         return nome;
     }
@@ -30,7 +30,7 @@ public class Vertice {
         return arestas;
     }
 
-    // --- métodos novos (VISUAL) ---
+
     public double getX() {
         return x;
     }
@@ -44,7 +44,7 @@ public class Vertice {
         this.y = y;
     }
 
-    // Adiciona uma aresta a este vértice
+
     public void adicionarAresta(Aresta a) {
         arestas.add(a);
     }

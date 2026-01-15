@@ -17,7 +17,7 @@ public class Main {
         Grafo grafo = new Grafo();
 
         int opcao = 0;
-        int contadorId = 1; // para gerar IDs automáticos
+        int contadorId = 1;
 
         while (opcao != 5) {
             System.out.println("===== SISTEMA DE ENCOMENDAS =====");
@@ -54,8 +54,12 @@ public class Main {
                     tabela.cadastrarEncomenda(encomenda);
                     contadorId++;
 
-                    // Calcular e mostrar a rota mais curta
+
                     List<Vertice> rota = Dijkstra.calcularRota(origem, destino);
+
+                    double distanciaTotal = Dijkstra.calcularDistanciaTotal(rota);
+                    System.out.println("Distância total da rota: " + distanciaTotal + " km");
+
                     Dijkstra.mostrarRota(rota);
                     VisualGrafo.mostrarGrafo(grafo.getVertices(), rota);
                     break;
@@ -68,20 +72,13 @@ public class Main {
 
                 case 3:
                     tabela.listarEncomendas();
-                    VisualGrafo.mostrarGrafo(grafo.getVertices(), null);
                     break;
 
                 case 4:
                     System.out.println("===== ROTAS NACIONAIS =====");
-                    for (Vertice v : grafo.getVertices().values()) {
-                        System.out.print(v.getNome() + " (" + v.getRegiao() + ") → ");
-                        for (var a : v.getArestas()) {
-                            System.out.print(a.getDestino().getNome() + " [" + a.getPeso() + "km] ");
-                        }
-                        System.out.println();
+
                         VisualGrafo.mostrarGrafo(grafo.getVertices(), null);
 
-                    }
                     break;
 
                 case 5:

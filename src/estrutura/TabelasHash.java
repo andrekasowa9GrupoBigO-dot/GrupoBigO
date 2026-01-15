@@ -4,21 +4,21 @@ import modelo.Encomenda;
 import java.util.HashMap;
 
 public class TabelasHash {
-    // HashMap para armazenar as encomendas com chave = ID
+
     private HashMap<Integer, Encomenda> tabela;
 
-    // Construtor
+
     public TabelasHash() {
         tabela = new HashMap<>();
     }
 
-    // Método para cadastrar uma encomenda
+
     public void cadastrarEncomenda(Encomenda e) {
         tabela.put(e.getId(), e);
         System.out.println("Encomenda cadastrada com sucesso!");
     }
 
-    // Método para remover uma encomenda pelo ID
+
     public void removerEncomenda(int id) {
         if(tabela.containsKey(id)) {
             tabela.remove(id);
@@ -28,7 +28,7 @@ public class TabelasHash {
         }
     }
 
-    // Método para listar todas as encomendas
+
     public void listarEncomendas() {
         if(tabela.isEmpty()) {
             System.out.println("Nenhuma encomenda cadastrada.");
@@ -39,7 +39,7 @@ public class TabelasHash {
         }
     }
 
-    // Método para buscar uma encomenda pelo ID (opcional)
+
     public Encomenda buscarEncomenda(int id) {
         return tabela.get(id);
     }
